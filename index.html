@@ -1,0 +1,701 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Future-Proof Your Drupal 7 Site</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/dave.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+		<div class="slides">
+
+<section data-id="8d292bc638d311336cdce07392c67102">
+  <h1>Future-Proof Your Drupal 7 Site</h1>
+	<p><img src="images/midcamp-logo.png"></p>
+	<p>Midcamp 2014</p>
+	<p>Dave Reid / <a href="https://www.twitter.com/davereid">@davereid</a></p>
+	<p><a href="https://davereid.github.io/2014-03-29">davereid.github.io/2014-03-29</a></p>
+</section>
+
+    <section data-id="1a8396829d71fd142ae894928ac88f05">
+        <section data-id="a3f762e2a05881e535a3fb9108f68f3c">
+            <h1>About Me</h1>
+<p>
+</p>
+<p>
+<font style="font-size: 42px;">
+    <br>
+        </font>
+</p>
+<p>
+
+<font style="font-size: 42px;">Senior Developer at Lullabot</font>
+
+</p>
+<p>
+
+<font style="font-size: 42px;">Twitter: <a href="https://twitter.com/davereid">@davereid</a>
+</font>
+
+</p>
+<p>
+
+<font style="font-size: 42px;">IRC: davereid</font>
+
+</p>
+<p>
+
+<font style="font-size: 42px;">Maintain amost 2% of contrib modules</font>
+
+</p>
+<p>
+
+<font style="font-size: 42px;">Core subsystem maintainer</font>
+
+</p>
+<p>
+</p>
+<p>
+
+<font style="font-size: 42px;">Father of two cats and <a href="https://twitter.com/OliverReid">one boy</a>
+</font>
+
+</p>
+
+
+</section>
+        <section data-id="cf28e14542a7aa6e88354abb41fa71e0">
+            <h2>
+<img src="images/oliver.jpg">
+            <br>
+</h2>
+        </section>
+        <section data-id="ef622d064a1dc1fc91f49514e8f3dd31">
+            <h2>
+<img src="images/cats.jpg">
+            <br>
+</h2>
+        </section>
+    </section>
+    <section data-id="5f6ea1999f50eb9b23ec802216620539">
+        <h1>Objectives</h1>
+<div>
+<br>
+</div>
+<p class="fragment" data-fragment-index="0">
+<font style="font-size: 42px;">For your site builders<br>and architects to make<br>informed choices now</font>
+</p>
+<p>
+<br>
+    </p>
+<p class="fragment" data-fragment-index="1">
+<font style="font-size: 42px;">Ease pain of site users<br>when switching to Drupal 8</font>
+</p>
+
+</section>
+    <section data-id="a9f047446cbe151c564f6481a08fefef">
+        <section data-id="eb934c376c5491c156c1f6393e6c0196">
+            <h1>User Interface</h1>
+        </section>
+        <section data-id="4f8d8b801c0ad9af9d6348074928e08d">
+            <h2>Spark Distribution</h2>
+<div>
+<a href="https://drupal.org/project/spark">
+            <font style="font-size: 42px;">https://drupal.org/project/spark</font>
+        </a>
+        <br>
+        <br>
+</div>
+<div>
+        <br>
+    </div>
+</section>
+<section data-id="5b7703f349d1e43b7a7d7d5fb7a299f3">
+    <h2>Navbar</h2>
+<div>
+    <a href="https://drupal.org/project/navbar">
+        <font style="font-size: 42px;">https://drupal.org/project/navbar</font>
+    </a>
+</div>
+<div>
+<img src="images/navbar.png" />
+<br>
+</div>
+<div>
+<br>
+</div>
+</section>
+<section data-id="efda66f7e75dc4694bccf485ea2ff397">
+    <h2>Inline Editing</h2>
+<div>
+    <a href="https://drupal.org/project/edit">
+        <font style="font-size: 42px;">https://drupal.org/project/edit</font>
+    </a>
+</div>
+<div>
+<img src="images/edit-author-form.png" />
+<br>
+</div>
+<div>
+<br>
+</div>
+</section>
+<section data-id="6964b397bacf7fd297dc1e4153eb5e9d">
+    <h2>Official WYSIWYG: CKEditor</h2>
+<div>
+    <a href="https://drupal.org/project/ckeditor">
+        <font style="font-size: 42px;">https://drupal.org/project/ckeditor</font>
+    </a>
+</div>
+<div>
+<img src="images/ckeditor.png" />
+<br>
+</div>
+</section>
+<!--<section data-id="e591f92c37a1171fe685750ee72c828f">
+    <h2>Responsive Preview</h2>
+<div>
+    <a href="https://drupal.org/project/responsive_preview">
+        <font style="font-size: 42px;">https://drupal.org/project/responsive_preview</font>
+    </a>
+</div>
+<div>
+<img src="https://drupal.org/files/project-images/screenshot-of-preview.png" style="width: 923.5221672384349px; height: 456.9867278409137px; max-height: none; max-width: none;">
+<br>
+</div>
+<span style="font-size: 30.10399627685547px; font-style: normal; font-variant: normal;">Not officially in D8:&nbsp;</span>
+<a href="https://drupal.org/node/1741498" style="font-size: 30.10399627685547px; font-style: normal; font-variant: normal;">https://drupal.org/node/1741498</a>
+</section>-->
+<section data-id="9763b240d6de27c13bff25a44336af6d">
+    <h2>Responsive Bartik</h2>
+<p>
+    <font style="font-size: 42px;">
+        <a href="https://drupal.org/project/responsive_bartik">https://drupal.org/project/responsive_bartik</a>
+    </font>
+</p>
+<p>
+<img src="images/responsive-bartik.png">
+<br>
+</p>
+</section>
+<section data-id="ad8f01ccaa274e361191410b46f79a52">
+    <h2>HTML5</h2>
+<div>
+    <font style="font-size: 42px;">
+        <a href="https://drupal.org/project/elements">https://drupal.org/project/elements</a>
+        <br>
+    </font>
+</div>
+<div>
+<font style="font-size: 42px;">
+<a href="https://drupal.org/project/html5_tools">https://drupal.org/project/html5_tools</a>
+</font>
+<br>
+</div>
+<div>
+<img src="images/html5-input.png" />
+<br>
+</div>
+</section>
+<section data-id="07a4162e15f604f373a41565a5ca690b">
+    <h2>VIEWS IN CORE!</h2>
+<div>
+    <a href="https://drupal.org/project/views">https://drupal.org/project/views</a>
+</div>
+<div>
+<img src="http://xjm.drupalgardens.com/sites/xjm.drupalgardens.com/files/piggy_bank.jpg" style="width: 626.5829225750523px; height: 468.95784675671456px; max-height: none; max-width: none;">
+<br>
+</div>
+</section>
+<section data-id="797a4c0a896fa42c8419b8e3d0675706">
+    <h2>Administration Views</h2>
+<p>
+    <font style="font-size: 42px;">
+        <a href="https://drupal.org/project/admin_views">https://drupal.org/project/admin_views</a>
+    </font>
+</p>
+<p>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/davereid/images/130915/Selection_005.png" style="width: 864.9651929634144px; height: 486.3800809402776px; max-height: none; max-width: none;">
+<br>
+</p>
+</section>
+<section data-id="cb6de22d3672b57579d185913454cef6">
+    <h2>Views Bulk Operations (light)</h2>
+<p>
+    <font style="font-size: 42px;">
+        <a href="https://drupal.org/project/views_bulk_operations">https://drupal.org/project/views_bulk_operations</a>
+    </font>
+</p>
+<p>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/davereid/images/130914/Selection_004.png" style="width: 911.2255306217238px; height: 420.623983379302px; max-height: none; max-width: none;">
+<br>
+</p>
+</section>
+<section data-id="2f6ac5b3eee25ffa3ea0f97e7f1e1b90">
+    <h2>Views Responsive Grid</h2>
+<div>
+<a href="https://drupal.org/project/views_responsive_grid">https://drupal.org/project/views_responsive_grid</a>
+    <br>
+</div>
+<div>
+<img src="https://drupal.org/files/project-images/newscolumns.jpeg" style="width: 821.3185547589603px; height: 542.7401625518928px; max-height: none; max-width: none;">
+    <br>
+</div>
+</section>
+<section data-id="bd99598261f5104a69538157579df12c">
+    <h2>Responsive Tables</h2>
+<div>
+    <a href="https://drupal.org/project/responsive_tables">https://drupal.org/project/responsive_tables</a>
+</div>
+<div>
+<img src="https://drupal.org/files/project-images/Selection_035.png" style="width: 708.3683631880791px; height: 509.4470702684435px; max-height: none; max-width: none;">
+<br>
+</div>
+</section>
+<section data-id="70a1d6cbe93bf888bf5b54540d50e693">
+    <h2>Breakpoints</h2>
+<div>
+<a href="https://drupal.org/project/breakpoints">https://drupal.org/project/breakpoints</a>
+    <br>
+</div>
+<div>
+<img src="https://drupal.org/files/project-images/breakpoints_group.png">
+    <br>
+</div>
+</section>
+<section data-id="bc5092ab3d0afd36d6931037aad5ffde">
+    <h2>Responsive Pictures</h2>
+<div>
+<a href="https://drupal.org/project/picture">https://drupal.org/project/picture</a>
+    <br>
+</div>
+<div>
+<img src="http://responsiveimages.org/img/devices.gif" style="width: 748.9862422817819px; height: 486.6858235055394px; max-height: none; max-width: none;">
+    <br>
+</div>
+</section>
+<section data-id="722f8f45ea181484d8bd5d97da41ceb1">
+    <h2>Tours</h2>
+<div>
+<a href="https://drupal.org/project/joyride">https://drupal.org/project/joyride</a>
+    <br>
+</div>
+<div>
+<img src="https://drupal.org/files/project-images/joyride-screenshot.png" style="width: 691.3585109713304px; height: 514.8844952505123px; max-height: none; max-width: none;">
+    <br>
+</div>
+</section>
+<section data-id="617c842f386bbff93cb2f072670f03c6">
+    <h2>Module page filtering</h2>
+<p>
+    <font style="font-size: 32px;">
+        <a href="https://drupal.org/project/instantfilter">https://drupal.org/project/instantfilter</a>
+    </font>
+</p>
+<p>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/davereid/images/130903/Selection_001.png" style="width: 829.569786286054px; height: 464.3835724284785px; max-height: none; max-width: none;">
+<br>
+</p>
+<div>
+<br>
+</div>
+</section>
+<section data-id="b61944ec64a7f3f2726daad421cfe2fe">
+    <h2>Simplified Menu Administration</h2>
+<p>
+    <font style="font-size: 32px;">
+        <a href="https://drupal.org/project/simplified_menu_admin">https://drupal.org/project/simplified_menu_admin</a>
+    </font>
+</p>
+<p>
+<img src="images/simplified-menu-admin.png">
+<br>
+</p>
+</section>
+<section data-id="22f300224506e5e9ee46008c4a1c0437">
+    <h2>Escape Admin</h2>
+<div>
+<font style="font-size: 32px;">
+    <a href="https://drupal.org/project/escape_admin">https://drupal.org/project/escape_admin</a>
+</font>
+<br>
+</div>
+<div>
+<br>
+</div>
+<div>
+<img src="images/escape-admin.png" style="width: 769.1604939507849px; height: 185.26602134003386px; max-height: none; max-width: none;">
+<br>
+</div>
+</section>
+	<section>
+    <h2>Caption Filter</h2>
+    <h4><a href="https://drupal.org/project/caption_filter">https://drupal.org/project/caption_filter</a></h4>
+    <p><img src="images/caption-filter.png" /></p>
+    <pre><code class="html">&lt;img data-align="center" data-caption="Test caption" ... /&gt;</code></pre>
+	</section>
+	<section>
+    <h2>Custom blocks (Bean)</h2>
+    <h4><a href="https://drupal.org/project/bean">https://drupal.org/project/bean</a></h4>
+    <p><img src="images/bean-blocks.png" /><br/><img src="images/bean-block-types.png" /></p>
+	</section>
+</section>
+<section data-id="a688a1e268fbebf2db78b1020fd04ddc">
+    <section data-id="3a716a79935fa03555df6e07f8fe5c20">
+        <h1>Field types</h1>
+        <p><img src="images/fields.png"></p>
+    </section>
+    <section data-id="e49e48b10441d9f17fe26183a275af96">
+        <h2>Entity reference</h2>
+<div>
+        <font style="font-size: 42px;">
+            <a href="https://drupal.org/project/entityreference">https://drupal.org/project/entityreference</a>
+        </font>
+    </div>
+<div>
+    <font style="font-size: 42px;">NOT Node or User reference modules</font>
+</div>
+<div>
+<img src="images/entity-reference.png">
+<br>
+</div>
+</section>
+<section data-id="d814dfd44c74023f398590a514db753c">
+    <h2>Telephone</h2>
+<div>
+    <font style="font-size: 42px;">
+        <a href="https://drupal.org/project/telephone">https://drupal.org/project/telephone</a>
+    </font>
+</div>
+<div>
+<font style="font-size: 42px;">NOT phone module</font>
+</div>
+</section>
+<section data-id="70555360dc7f2a77218372c43a5b17f0">
+    <h2>Email (lite)</h2>
+<div>
+    <font style="font-size: 42px;">
+        <a href="https://drupal.org/project/email">https://drupal.org/project/email</a>
+    </font>
+</div>
+</section>
+<section data-id="918ae82b0d8086197b2db4427fe16ffc">
+    <h2>URL</h2>
+<div>
+    <a href="https://drupal.org/project/url">
+        <font style="font-size: 42px;">https://drupal.org/project/url</font>
+    </a>
+</div>
+<div>
+<span>
+    <font style="font-size: 42px;">NOT link module</font>
+</span>
+</div>
+<div>
+<img src="images/link-field.png">
+<span>
+    <br>
+</span>
+</div>
+</section>
+<section data-id="ca77f453241c813c4f65bf28e3ce98a7">
+    <h2>Datetime (Date lite)</h2>
+<div>
+<font style="font-size: 42px;">
+    <a href="https://drupal.org/project/date">https://drupal.org/project/date</a>
+</font>
+<br>
+</div>
+<div>
+<br>
+</div>
+</section>
+</section>
+<section data-id="b30a1cad6cb15219befc87b57b3174be">
+    <section data-id="2cd34a903cfe440a1c4f2734adc35991">
+        <h1>For developers</h1>
+<div>
+        <br>
+    </div>
+<div>
+    <font style="font-size: 54px;">APIs and Plugins</font>
+</div>
+<div>
+<font style="font-size: 54px;">Libraries</font>
+</div>
+</section>
+<section data-id="9aa63bd7d21c735488a414ed512346ed">
+<h2>Hooks</h2>
+<pre><code class="php">
+/**
+ * Implements hook_mymodule_hook_info().
+ */
+function example_mymodule_hook_info() {
+  $info['example'] = array(
+    'label' =&gt; t('Example implementation'),
+    'callback' =&gt; 'example_mymodule_callback',
+    'settings form' =&gt; 'example_mymodule_form',
+  );
+  return $info;
+}</code></pre>
+
+
+
+
+
+
+
+
+<br>
+</section>
+<section data-id="e3d6f705abbddd215aa3eea00e7bbcbc">
+<h2>CTools plugins</h2>
+<pre><code class="php">/**
+ * Implements hook_ctools_plugin_directory().
+ */
+function example_ctools_plugin_directory($module, $plugin) {
+  if ($module == 'mymodule' &amp;&amp; $plugin == 'hook') {
+    return "plugins/$module/$plugin";
+  }
+}
+
+// plugins/example/hook/example_implementation.inc
+$plugin = array(
+  'title' =&gt; t('Example implementation'),
+  'class' =&gt; 'ExampleMyModuleHookImplementation',
+);
+
+// plugins/example/hook/ExampleImplementation.class.php
+class ExampleMyModuleHookImplementation {
+  // Does stuff.
+}</code></pre>
+<br>
+</section>
+<section data-id="c61a8da53ca7f402999653abc4bbd476">
+<h2>Plugins in D7</h2>
+<div>
+lib/MyModuleHookPluginInterface.php<pre><code class="php">class MyModuleHookPluginInterface {
+  public static function getInstance($config = array());
+  public function getDefaults();
+  public function process($config);
+}
+</code></pre>
+lib/MyModuleHookPluginBase.php<pre><code class="php">abstract class MyModuleHookPluginBase extends MyModuleHookPluginInterface {
+  public funciton getInstnace($config = array()) {
+    $class = get_called_class();
+    return new $class($config);
+  }
+
+  public function getDefaults() {
+    return array();
+  }
+
+  abstract public function process($config);
+}
+</code></pre>
+</div>
+
+
+
+
+
+</section>
+<section data-id="127aa427fce5b77b67bb49a2a6886334">
+<h2>Plugins in D7</h2>
+<div>
+example.module<pre><code class="php">/**
+ * Implements hook_mymodule_hook_info().
+ */
+function example_mymodule_hook_info() {
+  $info['example'] =
+    'label' =&gt; t('Example implementation'),
+    'class' =&gt; ExampleMyModuleHookPlugin',
+  );
+  return $info;
+}
+</code></pre>
+example.info<pre><code>
+files[] = lib/ExampleMyModuleHookPlugin.php
+</code></pre>
+lib/ExampleMyModuleHookPlugin.php<pre><code class="php">class ExampleMyModuleHookPlugin extends MyModuleHookPluginBase {
+  public function process($config) {
+    // Do stuff!
+  }
+}
+</code></pre>
+</div>
+
+
+
+
+
+
+
+
+</section>
+</section>
+<section data-id="2a0baaf945182fb4fe29a730650e70fb">
+    <section data-id="95fa2e44e23bc7423b1937fae4285444">
+        <h1>The Other Stuff</h1>
+    </section>
+	<section>
+    <h2>Configurable view/display modes</h2>
+    <h4><a href="https://drupal.org/project/entity_view_mode">https://drupal.org/project/entity_view_mode</a></h4>
+    <p><img src="images/entity-view-mode.png" /></p>
+	</section>
+    <section data-id="ffaf1bf16f7ac21ca483332565a38fb4">
+        <h2>CMI</h2>
+<div>
+<a href="https://drupal.org/project/configuration">https://drupal.org/project/configuration</a>???<br>
+</div>
+<div>
+<img src="images/configuration.png">
+        <br>
+</div>
+    </section>
+    <section data-id="8fa4f464d06bfa7036747115fec78da0">
+        <h2>Migrate is your friend</h2>
+<p>
+        <a href="https://drupal.org/project/migrate">
+            <font style="font-size: 42px;">https://drupal.org/project/migrate</font>
+        </a>
+    </p>
+<p>
+    <font style="font-size: 42px;">
+        <a href="https://drupal.org/project/migrate_d2d">https://drupal.org/project/migrate_d2d</a>
+    </font>
+</p>
+<p>
+<img src="images/migrate.png">
+<br>
+</p>
+</section>
+<section data-id="e875a803e27daf5364992ca62e70d046">
+    <h2>RESTful Web Services</h2>
+<p>
+    <font style="font-size: 42px;">
+        <a href="https://drupal.org/project/restws">https://drupal.org/project/restws<br>
+            </a>NOT services module</font>
+        </p>
+    </section>
+    <section data-id="770bd663f972658864729430961f4b4f">
+        <h2>Translation</h2>
+<div>
+        <font style="font-size: 42px;">
+            <a href="https://drupal.org/project/entity_translation">https://drupal.org/project/entity_translation</a>
+        </font>
+    </div>
+<div>
+    <a href="https://drupal.org/project/title">
+        <font style="font-size: 42px;">https://drupal.org/project/title</font>
+    </a>
+</div>
+<div>
+<img src="images/entity-translation.jpg" />
+<br>
+</div>
+</section>
+<section data-id="5e17891ad0a83a283161f007747ad41a">
+    <h2>PSR-0 / PSR-4</h2>
+<div>https://drupal.org/project/xautoload</div>
+</section>
+<section data-id="4dbcaa026cad1a3ed9e8081be7625645">
+    <h2>More things</h2>
+<div>Composer / Composer Manager</div>
+<div>phpunit</div>
+<div>Symfony</div>
+<div>Backbone</div>
+<div>Underscore</div>
+<div>Guzzle</div>
+<div>JS local storage</div>
+<div>
+    <br>
+</div>
+</section>
+</section>
+<section data-id="8b6fb16ef42671f2b4a9a489698fa99a">
+    <section data-id="b8e36f25c65a262d388104c604ed9eba">
+        <h1>Things you should probably stop using</h1>
+    </section>
+    <section data-id="c226b7cda2971a621b6f98c37148ddaa">
+        <h2>We don't want no scrubs</h2>
+<div>
+<a href="https://drupal.org/node/2116417">
+        <font style="font-size: 42px;">https://drupal.org/node/2116417</font>
+    </a>
+    <br>
+</div>
+<div>
+<img src="images/removed-modules.png">
+    <br>
+</div>
+</section>
+</section>
+<section data-id="9fbe75381f9ed77a3d6747cf995389a6">
+    <h1>Thank you!<br>Questions?</h1>
+</section>
+</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
