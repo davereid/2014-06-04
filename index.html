@@ -40,7 +40,7 @@
 	<p><img src="images/drupalcon-austin.jpg"></p>
 	<p>DrupalCon Austin 2014</p>
 	<p>Dave Reid / <a href="https://www.twitter.com/davereid">@davereid</a></p>
-	<p><a href="https://davereid.github.io/2014-06-24">davereid.github.io/2014-06-24</a></p>
+	<p><a href="https://davereid.github.io/2014-06-04">davereid.github.io/2014-06-04</a></p>
 </section>
 
     <section data-id="1a8396829d71fd142ae894928ac88f05">
@@ -103,6 +103,7 @@
 </h2>
         </section>
     </section>
+    <section>
     <section data-id="5f6ea1999f50eb9b23ec802216620539">
         <h1>Objectives</h1>
 <div>
@@ -119,6 +120,10 @@
 </p>
 
 </section>
+<section>
+ <img src="images/backport-all-the-things.jpg" height="800" />
+</section>
+</section>
     <section data-id="a9f047446cbe151c564f6481a08fefef">
         <section data-id="eb934c376c5491c156c1f6393e6c0196">
             <h1>User Interface</h1>
@@ -129,8 +134,7 @@
 <a href="https://drupal.org/project/spark">
             <font style="font-size: 42px;">https://drupal.org/project/spark</font>
         </a>
-        <br>
-        <br>
+<img src="images/spark.png">
 </div>
 <div>
         <br>
@@ -151,21 +155,13 @@
 <br>
 </div>
 </section>
-<section data-id="efda66f7e75dc4694bccf485ea2ff397">
-    <h2>Inline Editing</h2>
-<div>
-    <a href="https://drupal.org/project/edit">
-        <font style="font-size: 42px;">https://drupal.org/project/edit</font>
-    </a>
-</div>
-<div>
-<img src="images/edit-author-form.png" />
-<br>
-</div>
-<div>
-<br>
-</div>
-</section>
+    <section data-id="efda66f7e75dc4694bccf485ea2ff397">
+        <h2>Inline Editing</h2>
+        <a href="https://drupal.org/project/quickedit">
+            <font style="font-size: 42px;">https://drupal.org/project/quickedit</font>
+        </a>
+        <img src="images/inline-editing.png" />
+    </section>
 <section data-id="6964b397bacf7fd297dc1e4153eb5e9d">
     <h2>Official WYSIWYG: CKEditor</h2>
 <div>
@@ -223,16 +219,11 @@
 <br>
 </div>
 </section>
-<section data-id="07a4162e15f604f373a41565a5ca690b">
-    <h2>VIEWS IN CORE!</h2>
-<div>
-    <a href="https://drupal.org/project/views">https://drupal.org/project/views</a>
-</div>
-<div>
-<img src="http://xjm.drupalgardens.com/sites/xjm.drupalgardens.com/files/piggy_bank.jpg" style="width: 626.5829225750523px; height: 468.95784675671456px; max-height: none; max-width: none;">
-<br>
-</div>
-</section>
+    <section data-id="07a4162e15f604f373a41565a5ca690b">
+        <h2>VIEWS IN CORE!</h2>
+        <a href="https://drupal.org/project/views">https://drupal.org/project/views</a>
+        <img src="images/views.png">
+    </section>
 <section data-id="797a4c0a896fa42c8419b8e3d0675706">
     <h2>Administration Views</h2>
 <p>
@@ -365,6 +356,11 @@
     <h4><a href="https://drupal.org/project/bean">https://drupal.org/project/bean</a></h4>
     <p><img src="images/bean-blocks.png" /><br/><img src="images/bean-block-types.png" /></p>
 	</section>
+    <section>
+        <h2>Reusable blocks: MultiBlock</h2>
+        <h4><a href="https://drupal.org/project/multiblock">https://drupal.org/project/multiblock</a></h4>
+
+    </section>
 </section>
 <section data-id="a688a1e268fbebf2db78b1020fd04ddc">
     <section data-id="3a716a79935fa03555df6e07f8fe5c20">
@@ -444,12 +440,44 @@
         <br>
     </div>
 <div>
-    <font style="font-size: 54px;">APIs and Plugins</font>
-</div>
-<div>
 <font style="font-size: 54px;">Libraries</font>
 </div>
+<div>
+    <font style="font-size: 54px;">APIs and Plugins</font>
+</div>
 </section>
+    <section>
+        <h2>Composer</h2>
+        <h4>For managing external auto-loadable (PSR-0/4) libraries</h4>
+        <h4><a href="https://getcomposer.org">https://getcomposer.org</a></h4>
+        <img src="images/composer.png" />
+
+    </section>
+    <section>
+        <h3>Composer</h3>
+        <p>sites/all/composer.json</p>
+        <pre><code class="json">{
+    "require": {
+        "fale/isbn": "1.x-dev"
+    }
+}
+</pre></code>
+        <p>Run <code>composer install</code>
+        <pre><code class="php">// Make the sites/all/vendor libraries autoloadable.
+require_once DRUPAL_ROOT . '/sites/all/vendor/autoload.php';
+
+$result = \Isbn\Check::is10($isbn);
+        </code></pre>
+        <p><a href="https://drupal.org/project/composer_vendor">https://drupal.org/project/composer_vendor</a></p>
+        <p><a href="https://drupal.org/project/composer_manager">https://drupal.org/project/composer_manager</a></p>
+    </section>
+
+    <section>
+        <h2>API and Plugins</h2>
+        <p>Many ways to do the same thing in Drupal 7.<p>
+    </section>
+
+
 <section data-id="9aa63bd7d21c735488a414ed512346ed">
 <h2>Hooks</h2>
 <pre><code class="php">
@@ -476,10 +504,7 @@ function example_mymodule_hook_info() {
 </section>
 <section data-id="e3d6f705abbddd215aa3eea00e7bbcbc">
 <h2>CTools plugins</h2>
-<pre><code class="php">/**
- * Implements hook_ctools_plugin_directory().
- */
-function example_ctools_plugin_directory($module, $plugin) {
+<pre><code class="php">function example_ctools_plugin_directory($module, $plugin) {
   if ($module == 'mymodule' &amp;&amp; $plugin == 'hook') {
     return "plugins/$module/$plugin";
   }
@@ -529,13 +554,10 @@ lib/MyModuleHookPluginBase.php<pre><code class="php">abstract class MyModuleHook
 <section data-id="127aa427fce5b77b67bb49a2a6886334">
 <h2>Plugins in D7</h2>
 <div>
-example.module<pre><code class="php">/**
- * Implements hook_mymodule_hook_info().
- */
-function example_mymodule_hook_info() {
+example.module<pre><code class="php">function example_mymodule_hook_info() {
   $info['example'] =
     'label' =&gt; t('Example implementation'),
-    'class' =&gt; ExampleMyModuleHookPlugin',
+    'class' =&gt; 'ExampleMyModuleHookPlugin',
   );
   return $info;
 }
@@ -626,8 +648,7 @@ lib/ExampleMyModuleHookPlugin.php<pre><code class="php">class ExampleMyModuleHoo
 <div>https://drupal.org/project/xautoload</div>
 </section>
 <section data-id="4dbcaa026cad1a3ed9e8081be7625645">
-    <h2>More things</h2>
-<div>Composer / Composer Manager</div>
+    <h2>More More Things</h2>
 <div>phpunit</div>
 <div>Symfony</div>
 <div>Backbone</div>

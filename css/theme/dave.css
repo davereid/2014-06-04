@@ -146,3 +146,11 @@ body {
  *********************************************/
 .reveal .slide-number {
   color: #13daec; }
+
+.reveal pre code {
+  max-height: 500px;
+}
+
+.reveal pre {
+  font-size: 0.6em;
+}
