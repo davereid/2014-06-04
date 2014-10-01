@@ -176,7 +176,7 @@
     <section data-id="07a4162e15f604f373a41565a5ca690b">
         <h2>VIEWS IN CORE!</h2>
         <a href="https://drupal.org/project/views">drupal.org/project/views</a>
-        <img src="images/views.png">
+        <img src="images/views.png" class="stretch" />
     </section>
 <section data-id="797a4c0a896fa42c8419b8e3d0675706">
     <h2>Administration Views</h2>
@@ -369,9 +369,13 @@
 </section>
 <section>
     <section>
-        <h1>Performance</h1>
+        <h1>Backend</h1>
     </section>
-     <section>
+    <section>
+        <h2>UUIDs</h2>
+        <h4><a href="https://www.drupal.org/project/uuid">drupal.org/project/uuid</a></h4>
+    </section>
+    <section>
         <h2>Render Cache</h2>
         <h4><a href="https://www.drupal.org/project/render_cache">drupal.org/project/render_cache</a></h4>
         <h4><a href="https://www.drupal.org/project/entity_modified">drupal.org/project/entity_modified</a></h4>
@@ -413,6 +417,23 @@ $result = \Isbn\Check::is10($isbn);</code></pre>
         <p><a href="https://www.drupal.org/project/composer_vendor">drupal.org/project/composer_vendor</a></p>
         <p><a href="https://www.drupal.org/project/composer_manager">drupal.org/project/composer_manager</a></p>
     </section>
+
+    <!--<section>
+        <h2>Guzzle</h2>
+        <h4><a href="http://guzzlephp.org/">guzzlephp.org</a></h4>
+        <h4><em>ALTERNATIVE to drupal_http_request()</em></h4>
+composer.json
+        <pre><code class="json">{
+    "require": {
+        "guzzlehttp/guzzle": "4.1.*",
+    }
+}
+</pre></code>
+Usage:
+<pre><code class="php">$client = new Guzzle\Service\Client('http://test.com/');
+$response = $client->get('/resource.xml')->send();
+</pre></code>
+    </section>-->
 
     <section>
         <h2>API and Plugins</h2>
@@ -538,12 +559,17 @@ lib/ExampleMyModuleHookPlugin.php<pre><code class="php">class ExampleMyModuleHoo
 </section>-->
     <section data-id="4dbcaa026cad1a3ed9e8081be7625645">
         <h2>More More Things</h2>
-        <div>phpunit</div>
-        <div>Symfony</div>
-        <div>Backbone</div>
-        <div>Underscore</div>
-        <div>Guzzle</div>
+        <div><a href="https://phpunit.de/">PHPUnit</a></div>
+        <div><a href="http://symfony.com/">Symfony</a></div>
+        <div><a href="http://backbonejs.org/">Backbone.js</a></div>
+        <div><a href="http://underscorejs.org/">Underscore.js</a></div>
+        <div><a href="http://guzzlephp.org/">Guzzle</a></div>
         <div>JS local storage</div>
+    </section>
+    <section>
+        <h2>Distribution: PreD8!</h2>
+        <h4><a href="https://www.drupal.org/project/pred8">drupal.org/project/pred8</a></h4>
+        <img src="https://www.drupal.org/files/project-images/hackpad.com_SwY1KcSZgTB_p.121024_1398462667471_PreD8-220px.png" class="stretch" />
     </section>
 </section>
 <section>
