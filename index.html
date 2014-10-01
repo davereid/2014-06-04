@@ -380,20 +380,6 @@
         <h4><a href="https://www.drupal.org/project/render_cache">drupal.org/project/render_cache</a></h4>
         <h4><a href="https://www.drupal.org/project/entity_modified">drupal.org/project/entity_modified</a></h4>
     </section>
-</section>
-<section data-id="b30a1cad6cb15219befc87b57b3174be">
-    <section data-id="2cd34a903cfe440a1c4f2734adc35991">
-        <h1>For developers</h1>
-<div>
-        <br>
-    </div>
-<div>
-<font style="font-size: 54px;">Libraries</font>
-</div>
-<div>
-    <font style="font-size: 54px;">APIs and Plugins</font>
-</div>
-</section>
     <section>
         <h2>Composer</h2>
         <h4>For managing external auto-loadable (PSR-0/4) libraries</h4>
@@ -479,18 +465,19 @@ class ExampleMyModuleHookImplementation {
     <h2>Plugins in D7</h2>
 <div>
 lib/MyModuleHookPluginInterface.php<pre><code class="php">class MyModuleHookPluginInterface {
-  public static function getInstance($config = array());
-  public function getDefaults();
-  public function doSomething($config);
+  public function getDefaultConfig();
+  public function doSomething();
 }
 </code></pre>
 lib/MyModuleHookPluginBase.php<pre><code class="php">abstract class MyModuleHookPluginBase extends MyModuleHookPluginInterface {
-  public static function getInstance($config = array()) {
-    $class = get_called_class();
-    return new $class($config);
+  /** @var array */
+  public $config;
+
+  public function __construct(array $config = array()) {
+    $this->config = $config + $this->getDefaultConfig();
   }
 
-  public function getDefaults() {
+  public function getDefaultConfig() {
     return array();
   }
 
@@ -519,6 +506,19 @@ lib/ExampleMyModuleHookPlugin.php<pre><code class="php">class ExampleMyModuleHoo
 }
 </code></pre>
 </div>
+    </section>
+    <section>
+    <h2>Plugins in D7: Invoking</h2>
+<pre><code class="php">funcion mymodule_get_hook_instance($instance) {
+  $info = module_invoke_all('mymodule_hook_info');
+  drupal_alter('mymodule_hook_info', $info);
+  if (isset($info[$instance])) {
+    return new $class($config);
+  }
+  else {
+    throw new Exception(...);
+  }
+}</code></pre>
     </section>
 </section>
 <section>
