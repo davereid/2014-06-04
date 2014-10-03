@@ -509,7 +509,7 @@ lib/ExampleMyModuleHookPlugin.php<pre><code class="php">class ExampleMyModuleHoo
     </section>
     <section>
     <h2>Plugins in D7: Invoking</h2>
-<pre><code class="php">funcion mymodule_get_hook_instance($instance) {
+<pre><code class="php">function mymodule_get_hook_instance($instance) {
   $info = module_invoke_all('mymodule_hook_info');
   drupal_alter('mymodule_hook_info', $info);
   if (isset($info[$instance])) {
