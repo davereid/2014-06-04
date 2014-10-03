@@ -469,7 +469,7 @@ lib/MyModuleHookPluginInterface.php<pre><code class="php">interface MyModuleHook
   public function doSomething();
 }
 </code></pre>
-lib/MyModuleHookPluginBase.php<pre><code class="php">abstract class MyModuleHookPluginBase extends MyModuleHookPluginInterface {
+lib/MyModuleHookPluginBase.php<pre><code class="php">abstract class MyModuleHookPluginBase implements MyModuleHookPluginInterface {
   /** @var array */
   public $config;
 
