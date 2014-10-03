@@ -518,7 +518,9 @@ lib/ExampleMyModuleHookPlugin.php<pre><code class="php">class ExampleMyModuleHoo
   else {
     throw new Exception(...);
   }
-}</code></pre>
+}
+
+$results = mymodule_get_hook_instance('example')->doSomething();</code></pre>
     </section>
 </section>
 <section>
